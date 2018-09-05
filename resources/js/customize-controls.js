@@ -12,8 +12,8 @@
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-import checkboxMultiple from './customize-controls/checkbox-multiple.js';
-import palette          from './customize-controls/palette.js';
-import radioImage       from './customize-controls/radio-image.js';
-import selectGroup      from './customize-controls/select-group.js';
-import selectMultiple   from './customize-controls/select-multiple.js';
+import checkboxMultiple from './controls/checkbox-multiple.js';
+import palette          from './controls/palette.js';
+import radioImage       from './controls/radio-image.js';
+import selectGroup      from './controls/select-group.js';
+import selectMultiple   from './controls/select-multiple.js';
