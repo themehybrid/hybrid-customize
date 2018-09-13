@@ -18,7 +18,8 @@ The following settings are available:
 
 ## Requirements
 
-* PHP 5.6+ (preferably 7+)
+* WordPress 4.9+.
+* PHP 5.6+ (preferably 7+).
 * [Composer](https://getcomposer.org/) for managing PHP dependencies.
 
 ## Documentation
@@ -44,13 +45,19 @@ composer require justintadlock/hybrid-customize
 You need to register the service provider during your bootstrapping process.  In your bootstrapping code, you should have something like the following:
 
 ```php
-$mythic = new \Hybrid\Core\Application();
+$app = new \Hybrid\Core\Application();
 ```
 
 After that point, you can register the service provider:
 
 ```php
-$mythic->provider( \Hybrid\Customize\ServiceProvider::class );
+$app->provider( \Hybrid\Customize\ServiceProvider::class );
 ```
 
 This is basically going to set up and ready any JS-based customizer controls.
+
+## Copyright and License
+
+This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
+
+2018 &copy; [Justin Tadlock](http://justintadlock.com).
