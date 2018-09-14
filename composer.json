@@ -23,6 +23,6 @@
 	},
 	"require"     : {
 		"php" : ">=5.6",
-                "justintadlock/hybrid-core" : "5.0.x-dev"
+                "justintadlock/hybrid-core" : "^5.0.0"
 	}
 }
