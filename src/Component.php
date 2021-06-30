@@ -7,8 +7,8 @@
  *
  * @package   HybridCustomize
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2018, Justin Tadlock
- * @link      https://github.com/justintadlock/hybrid-customize
+ * @copyright Copyright (c) 2018 - 2021, Justin Tadlock
+ * @link      https://github.com/themehybrid/hybrid-customize
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -28,7 +28,7 @@ use Hybrid\Customize\Controls\SelectMultiple;
  * @since  1.0.0
  * @access public
  */
-class Customize implements Bootable {
+class Component implements Bootable {
 
 	/**
 	 * Adds our customizer-related actions to the appropriate hooks.
@@ -62,9 +62,7 @@ class Customize implements Bootable {
 		];
 
 		array_map( function( $control ) use ( $manager ) {
-
 			$manager->register_control_type( $control );
-
 		}, $controls );
 	}
 }

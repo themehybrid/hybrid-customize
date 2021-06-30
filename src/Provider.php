@@ -7,14 +7,14 @@
  *
  * @package   HybridCustomize
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2018, Justin Tadlock
- * @link      https://github.com/justintadlock/hybrid-customize
+ * @copyright Copyright (c) 2018 - 2021, Justin Tadlock
+ * @link      https://github.com/themehybrid/hybrid-customize
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 namespace Hybrid\Customize;
 
-use Hybrid\Tools\ServiceProvider;
+use Hybrid\Core\ServiceProvider;
 
 /**
  * Customize provider.
@@ -22,7 +22,7 @@ use Hybrid\Tools\ServiceProvider;
  * @since  1.0.0
  * @access public
  */
-class CustomizeServiceProvider extends ServiceProvider {
+class Provider extends ServiceProvider {
 
 	/**
 	 * Registration callback that adds a single instance of the customize
@@ -33,8 +33,7 @@ class CustomizeServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register() {
-
-		$this->app->singleton( Customize::class );
+		$this->app->singleton( Component::class );
 	}
 
 	/**
@@ -45,7 +44,6 @@ class CustomizeServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function boot() {
-
-		$this->app->resolve( Customize::class )->boot();
+		$this->app->resolve( Component::class )->boot();
 	}
 }

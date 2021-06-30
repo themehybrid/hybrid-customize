@@ -24,34 +24,10 @@ The following settings are available:
 
 ## Documentation
 
-This project is only meant to work in conjunction with the Hybrid Core framework.  If you're not already working with and building a theme using it, the following will be useless.
-
-### Installation
-
-First, you'll need to open your command line tool and change directories to your theme folder.
-
-```bash
-cd path/to/wp-content/themes/<your-theme-name>
-```
-
-Then, use Composer to install the package.
-
-```bash
-composer require justintadlock/hybrid-customize
-```
-
-### Register the service provider
-
-You need to register the service provider during your bootstrapping process.  In your bootstrapping code, you should have something like the following:
+You need to register the service provider during your bootstrapping process:
 
 ```php
-$app = new \Hybrid\Core\Application();
-```
-
-After that point, you can register the service provider:
-
-```php
-$app->provider( \Hybrid\Customize\ServiceProvider::class );
+$slug->provider( \Hybrid\Customize\Provider::class );
 ```
 
 This is basically going to set up and ready any JS-based customizer controls.
@@ -60,4 +36,4 @@ This is basically going to set up and ready any JS-based customizer controls.
 
 This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
-2018 &copy; [Justin Tadlock](http://justintadlock.com).
+2018 - 2021 &copy; [Justin Tadlock](http://justintadlock.com).
