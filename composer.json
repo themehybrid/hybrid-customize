@@ -22,8 +22,8 @@
 		}
 	},
 	"require"     : {
-		"php" : ">=5.6",
-                "themehybrid/hybrid-core"      : "dev-master",
-		"themehybrid/hybrid-contracts" : "dev-master"
+		"php" : ">=7.4",
+		"themehybrid/hybrid-core"      : "^6.0 || ^7.0",
+		"themehybrid/hybrid-contracts" : "^1.0 || ^2.0"
 	}
 }

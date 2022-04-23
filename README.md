@@ -19,7 +19,7 @@ The following settings are available:
 ## Requirements
 
 * WordPress 4.9+.
-* PHP 5.6+ (preferably 7+).
+* PHP 7.4+ (preferably 8+).
 * [Composer](https://getcomposer.org/) for managing PHP dependencies.
 
 ## Documentation
