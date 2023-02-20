@@ -7,10 +7,11 @@
  * any taxonomy).  By passing in a custom `$args` parameter, which is passed to
  * `wp_dropdown_categories()`, you can alter the output of the dropdown select.
  *
- * @package   Hybrid
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2018 - 2021, Justin Tadlock
+ * @package   HybridCustomize
  * @link      https://github.com/themehybrid/hybrid-customize
+ *
+ * @author    Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
