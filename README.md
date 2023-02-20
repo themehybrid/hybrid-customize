@@ -1,6 +1,6 @@
 # Hybrid\\Customize
 
-Hybrid Customize is an add-on package for the [Hybrid Core](https://github.com/justintadlock/hybrid-core) WordPress theme framework that creates extra controls and settings that theme authors can use to build their themes.
+Hybrid Customize is an add-on package for the [Hybrid Core](https://github.com/themehybrid/hybrid-core) WordPress theme framework that creates extra controls and settings that theme authors can use to build their themes.
 
 The following controls are available:
 
