@@ -1,6 +1,6 @@
 # Hybrid\\Customize
 
-Hybrid Customize is an add-on package for the [Hybrid Core](https://github.com/justintadlock/hybrid-core) WordPress theme framework that creates extra controls and settings that theme authors can use to build their themes.
+Hybrid Customize is an add-on package for the [Hybrid Core](https://github.com/themehybrid/hybrid-core) WordPress theme framework that creates extra controls and settings that theme authors can use to build their themes.
 
 The following controls are available:
 
@@ -19,7 +19,7 @@ The following settings are available:
 ## Requirements
 
 * WordPress 4.9+.
-* PHP 5.6+ (preferably 7+).
+* PHP 7.4+ (preferably 8+).
 * [Composer](https://getcomposer.org/) for managing PHP dependencies.
 
 ## Documentation
@@ -36,4 +36,4 @@ This is basically going to set up and ready any JS-based customizer controls.
 
 This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
-2018 - 2021 &copy; [Justin Tadlock](http://justintadlock.com).
+2008&thinsp;&ndash;&thinsp;2023 &copy; [Theme Hybrid](https://themehybrid.com).
