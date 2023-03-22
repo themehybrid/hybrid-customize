@@ -4,11 +4,12 @@
  *
  * Allows developers to have a selectable color palette/scheme for their users.
  *
- * @package    Hybrid
- * @author     Justin Tadlock <justintadlock@gmail.com>
- * @copyright  Copyright (c) 2018, Justin Tadlock
- * @link       https://github.com/themehybrid/hybrid-customize
- * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @package   HybridCustomize
+ * @link      https://github.com/themehybrid/hybrid-customize
+ *
+ * @author    Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
+ * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 namespace Hybrid\Customize\Controls;

@@ -1,15 +1,15 @@
 {
-	"name"        : "justintadlock/hybrid-customize",
+	"name"        : "themehybrid/hybrid-customize",
 	"description" : "Additional WordPress customizer controls and settings for the Hybrid Core framework.",
 	"keywords"    : [ "wordpress" ],
 	"homepage"    : "https://github.com/themehybrid/hybrid-customize",
 	"license"     : "GPL-2.0-or-later",
 	"authors"     : [
 		{
-			"name"     : "Justin Tadlock",
-			"email"    : "justintadlock@gmail.com",
-			"homepage" : "https://themehybrid.com",
-			"role"     : "Developer"
+			"name": "Theme Hybrid",
+			"email": "themehybrid@gmail.com",
+			"homepage": "https://themehybrid.com",
+			"role": "Developer"
 		}
 	],
 	"support"     : {
@@ -22,8 +22,8 @@
 		}
 	},
 	"require"     : {
-		"php" : ">=5.6",
-                "themehybrid/hybrid-core"      : "dev-master",
-		"themehybrid/hybrid-contracts" : "dev-master"
+		"php" : ">=7.4",
+		"themehybrid/hybrid-core"      : "^6.0 || ^7.0",
+		"themehybrid/hybrid-contracts" : "^1.0 || ^2.0"
 	}
 }
