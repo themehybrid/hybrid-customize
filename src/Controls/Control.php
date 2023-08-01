@@ -20,19 +20,22 @@ use WP_Customize_Control;
  * Multiple checkbox customize control class.
  *
  * @since  1.0.0
+ *
  * @access public
  */
 abstract class Control extends WP_Customize_Control {
 
-	/**
-	 * This is the PHP callback for rendering the control content. JS-based
-	 * controls require this method to be empty. Because most of our classes
-	 * utilize JS templates, we're defining this in the base class to not
-	 * worry about it in our sub-classes.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return bool
-	 */
-	protected function render_content() {}
+    /**
+     * This is the PHP callback for rendering the control content. JS-based
+     * controls require this method to be empty. Because most of our classes
+     * utilize JS templates, we're defining this in the base class to not
+     * worry about it in our sub-classes.
+     *
+     * @since  1.0.0
+     * @return bool
+     *
+     * @access public
+     */
+    protected function render_content() {}
+
 }

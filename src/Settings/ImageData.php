@@ -25,52 +25,55 @@ use WP_Customize_Setting as Setting;
  * Saves image data in addition to the URL.
  *
  * @since  1.0.0
+ *
  * @access public
  */
 class ImageData extends Setting {
 
-	/**
-	 * Overwrites the `update()` method so we can save some extra data.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @param  string  $value
-	 * @return string
-	 */
-	protected function update( $value ) {
+    /**
+     * Overwrites the `update()` method so we can save some extra data.
+     *
+     * @since  1.0.0
+     * @param  string $value
+     * @return string
+     *
+     * @access public
+     */
+    protected function update( $value ) {
 
-		$base = $this->id_data['base'];
+        $base = $this->id_data['base'];
 
-		if ( $value ) {
+        if ( $value ) {
 
-			$post_id = attachment_url_to_postid( $value );
+            $post_id = attachment_url_to_postid( $value );
 
-			if ( $post_id ) {
+            if ( $post_id ) {
 
-				$image = wp_get_attachment_image_src( $post_id );
+                $image = wp_get_attachment_image_src( $post_id );
 
-				if ( $image ) {
+                if ( $image ) {
 
-					// Set up a custom array of data to save.
-					$data = [
-						'url'    => esc_url_raw( $image[0] ),
-						'width'  => absint( $image[1] ),
-						'height' => absint( $image[2] ),
-						'id'     => absint( $post_id )
-					];
+                    // Set up a custom array of data to save.
+                    $data = [
+                        'height' => absint( $image[2] ),
+                        'id'     => absint( $post_id ),
+                        'url'    => esc_url_raw( $image[0] ),
+                        'width'  => absint( $image[1] ),
+                    ];
 
-					set_theme_mod( "{$base}_data", $data );
-				}
-			}
-		}
+                    set_theme_mod( "{$base}_data", $data );
+                }
+            }
+        }
 
-		// No media? Remove the data mod.
-		if ( empty( $value ) || empty( $post_id ) || empty( $image ) ) {
+        // No media? Remove the data mod.
+        if ( empty( $value ) || empty( $post_id ) || empty( $image ) ) {
 
-			remove_theme_mod( "{$base}_data" );
-		}
+            remove_theme_mod( "{$base}_data" );
+        }
 
-		// Let's send this back up and let the parent class do its thing.
-		return parent::update( $value );
-	}
+        // Let's send this back up and let the parent class do its thing.
+        return parent::update( $value );
+    }
+
 }
