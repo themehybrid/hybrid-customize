@@ -12,7 +12,7 @@
  *
  * @author    Theme Hybrid
  * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 namespace Hybrid\Customize\Controls;
@@ -21,61 +21,67 @@ namespace Hybrid\Customize\Controls;
  * Dropdown terms customize control class.
  *
  * @since  1.0.0
+ *
  * @access public
  */
 class DropdownTerms extends Control {
 
-	/**
-	 * The type of customize control being rendered.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @var    string
-	 */
-	public $type = 'hybrid-dropdown-terms';
+    /**
+     * The type of customize control being rendered.
+     *
+     * @since  1.0.0
+     * @var    string
+     *
+     * @access public
+     */
+    public $type = 'hybrid-dropdown-terms';
 
-	/**
-	 * Custom arguments to pass into `wp_dropdown_categories()`.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @var    array
-	 */
-	public $args = [];
+    /**
+     * Custom arguments to pass into `wp_dropdown_categories()`.
+     *
+     * @since  1.0.0
+     * @var    array
+     *
+     * @access public
+     */
+    public $args = [];
 
-	/**
-	 * Displays the control content.
-	 *
-	 * @since 1.0.0
-	 * @access protected
-	 * @return void
-	 */
-	protected function render_content() {
+    /**
+     * Displays the control content.
+     *
+     * @since 1.0.0
+     * @return void
+     *
+     * @access protected
+     */
+    protected function render_content() {
 
-		// Allow devs to pass in custom arguments.
-		$args = wp_parse_args( $this->args, [
-			'hierarchical'      => true,
-			'show_option_none'  => ' ',
-			'option_none_value' => '0'
-		] );
+        // Allow devs to pass in custom arguments.
+        $args = wp_parse_args( $this->args, [
+            'hierarchical'      => true,
+            'option_none_value' => '0',
+            'show_option_none'  => ' ',
+        ] );
 
-		// Overwrite specific arguments.
-		$args['name']     = '_customize-dropdown-terms-' . $this->id;
-		$args['selected'] = $this->value();
-		$args['echo']     = false; ?>
+        // Overwrite specific arguments.
+        $args['name']     = '_customize-dropdown-terms-' . $this->id;
+        $args['selected'] = $this->value();
+        $args['echo']     = false; ?>
 
-		<label>
+        <label>
 
-			<?php if ( ! empty( $this->label ) ) : ?>
-				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-			<?php endif; ?>
+            <?php if ( ! empty( $this->label ) ) : ?>
+                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+            <?php endif; ?>
 
-			<?php if ( ! empty( $this->description ) ) : ?>
-				<span class="description customize-control-description"><?php echo $this->description; ?></span>
-			<?php endif; ?>
+            <?php if ( ! empty( $this->description ) ) : ?>
+                <span class="description customize-control-description"><?php echo $this->description; ?></span>
+            <?php endif; ?>
 
-			<?php echo str_replace( '<select', '<select ' . $this->get_link(), wp_dropdown_categories( $args ) ); ?>
+            <?php echo str_replace( '<select', '<select ' . $this->get_link(), wp_dropdown_categories( $args ) ); ?>
 
-		</label>
-	<?php }
+        </label>
+        <?php
+    }
+
 }

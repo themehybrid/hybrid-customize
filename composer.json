@@ -1,10 +1,11 @@
 {
-	"name"        : "themehybrid/hybrid-customize",
-	"description" : "Additional WordPress customizer controls and settings for the Hybrid Core framework.",
-	"keywords"    : [ "wordpress" ],
-	"homepage"    : "https://github.com/themehybrid/hybrid-customize",
-	"license"     : "GPL-2.0-or-later",
-	"authors"     : [
+	"name": "themehybrid/hybrid-customize",
+	"description": "Additional WordPress customizer controls and settings for the Hybrid Core framework.",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"wordpress"
+	],
+	"authors": [
 		{
 			"name": "Theme Hybrid",
 			"email": "themehybrid@gmail.com",
@@ -12,18 +13,19 @@
 			"role": "Developer"
 		}
 	],
-	"support"     : {
-		"issues" : "https://github.com/themehybrid/hybrid-customize/issues",
-		"forum"  : "https://themehybrid.com/board/topics"
+	"homepage": "https://github.com/themehybrid/hybrid-customize",
+	"support": {
+		"issues": "https://github.com/themehybrid/hybrid-customize/issues",
+		"forum": "https://themehybrid.com/board/topics"
 	},
-	"autoload"    : {
-		"psr-4" : {
-			"Hybrid\\Customize\\" : "src/"
+	"require": {
+		"php": ">=7.4",
+		"themehybrid/hybrid-contracts": "^1.0 || ^2.0",
+		"themehybrid/hybrid-core": "^6.0 || ^7.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Hybrid\\Customize\\": "src/"
 		}
-	},
-	"require"     : {
-		"php" : ">=7.4",
-		"themehybrid/hybrid-core"      : "^6.0 || ^7.0",
-		"themehybrid/hybrid-contracts" : "^1.0 || ^2.0"
 	}
 }
