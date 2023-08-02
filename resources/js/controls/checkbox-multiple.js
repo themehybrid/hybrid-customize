@@ -9,7 +9,7 @@
  *
  * @author    Theme Hybrid
  * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 wp.customize.controlConstructor['hybrid-checkbox-multiple'] = wp.customize.Control.extend( {
