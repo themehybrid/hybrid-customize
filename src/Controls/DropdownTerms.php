@@ -11,7 +11,7 @@
  * @link      https://github.com/themehybrid/hybrid-customize
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
  * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -19,40 +19,27 @@ namespace Hybrid\Customize\Controls;
 
 /**
  * Dropdown terms customize control class.
- *
- * @since  1.0.0
- *
- * @access public
  */
 class DropdownTerms extends Control {
 
     /**
      * The type of customize control being rendered.
      *
-     * @since  1.0.0
-     * @var    string
-     *
-     * @access public
+     * @var string
      */
     public $type = 'hybrid-dropdown-terms';
 
     /**
      * Custom arguments to pass into `wp_dropdown_categories()`.
      *
-     * @since  1.0.0
-     * @var    array
-     *
-     * @access public
+     * @var array
      */
     public $args = [];
 
     /**
      * Displays the control content.
      *
-     * @since 1.0.0
      * @return void
-     *
-     * @access protected
      */
     protected function render_content() {
 
@@ -70,13 +57,13 @@ class DropdownTerms extends Control {
 
         <label>
 
-            <?php if ( ! empty( $this->label ) ) : ?>
+            <?php if ( ! empty( $this->label ) ) { ?>
                 <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-            <?php endif; ?>
+            <?php } ?>
 
-            <?php if ( ! empty( $this->description ) ) : ?>
+            <?php if ( ! empty( $this->description ) ) { ?>
                 <span class="description customize-control-description"><?php echo $this->description; ?></span>
-            <?php endif; ?>
+            <?php } ?>
 
             <?php echo str_replace( '<select', '<select ' . $this->get_link(), wp_dropdown_categories( $args ) ); ?>
 

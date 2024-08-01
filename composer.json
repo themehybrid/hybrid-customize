@@ -23,9 +23,14 @@
 		"themehybrid/hybrid-contracts": "^1.0 || ^2.0",
 		"themehybrid/hybrid-core": "^6.0 || ^7.0"
 	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
 	"autoload": {
 		"psr-4": {
 			"Hybrid\\Customize\\": "src/"
 		}
+	},
+	"config": {
+		"sort-packages": true
 	}
 }

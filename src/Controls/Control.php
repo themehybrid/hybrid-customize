@@ -8,7 +8,7 @@
  * @link      https://github.com/themehybrid/hybrid-customize
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
  * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -18,10 +18,6 @@ use WP_Customize_Control;
 
 /**
  * Multiple checkbox customize control class.
- *
- * @since  1.0.0
- *
- * @access public
  */
 abstract class Control extends WP_Customize_Control {
 
@@ -31,10 +27,7 @@ abstract class Control extends WP_Customize_Control {
      * utilize JS templates, we're defining this in the base class to not
      * worry about it in our sub-classes.
      *
-     * @since  1.0.0
      * @return bool
-     *
-     * @access public
      */
     protected function render_content() {}
 

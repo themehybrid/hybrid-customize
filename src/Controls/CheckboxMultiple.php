@@ -9,7 +9,7 @@
  * @link      https://github.com/themehybrid/hybrid-customize
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
  * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -17,30 +17,20 @@ namespace Hybrid\Customize\Controls;
 
 /**
  * Multiple checkbox customize control class.
- *
- * @since  1.0.0
- *
- * @access public
  */
 class CheckboxMultiple extends Control {
 
     /**
      * The type of customize control being rendered.
      *
-     * @since  1.0.0
-     * @var    string
-     *
-     * @access public
+     * @var string
      */
     public $type = 'hybrid-checkbox-multiple';
 
     /**
      * Add custom parameters to pass to the JS via JSON.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access public
      */
     public function to_json() {
         parent::to_json();
@@ -54,12 +44,10 @@ class CheckboxMultiple extends Control {
     /**
      * Underscore JS template to handle the control's output.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access protected
      */
-    protected function content_template() { ?>
+    protected function content_template() {
+        ?>
 
         <# if ( ! data.choices ) {
             return;

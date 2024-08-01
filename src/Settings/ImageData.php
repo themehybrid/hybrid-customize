@@ -13,7 +13,7 @@
  * @link      https://github.com/themehybrid/hybrid-customize
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
  * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -23,21 +23,14 @@ use WP_Customize_Setting as Setting;
 
 /**
  * Saves image data in addition to the URL.
- *
- * @since  1.0.0
- *
- * @access public
  */
 class ImageData extends Setting {
 
     /**
      * Overwrites the `update()` method so we can save some extra data.
      *
-     * @since  1.0.0
-     * @param  string $value
+     * @param string $value
      * @return string
-     *
-     * @access public
      */
     protected function update( $value ) {
 
