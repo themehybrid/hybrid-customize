@@ -20,20 +20,13 @@ use WP_Customize_Setting as Setting;
 
 /**
  * Handles an array of values by running the `sanitize_callback` through `array_map()`.
- *
- * @since  1.0.0
- *
- * @access public
  */
 class ArrayMap extends Setting {
 
     /**
      * The sanitize callback function to run over each element of the array.
      *
-     * @since  1.0.0
-     * @var    string
-     *
-     * @access public
+     * @var string
      */
     public $sanitize_callback = 'sanitize_text_field';
 
@@ -42,11 +35,8 @@ class ArrayMap extends Setting {
      * `sanitize()` method and runs `array_map()` over the multiple values.
      * Expected input is either an array or comma-separated list of values.
      *
-     * @since  1.0.0
-     * @param  array|string $values
+     * @param array|string $values
      * @return array
-     *
-     * @access public
      */
     public function sanitize( $values ) {
 
@@ -59,11 +49,8 @@ class ArrayMap extends Setting {
      * Callback function for `array_map()`.  Uses the defined `sanitize_callback`
      * to filter each element of the array.
      *
-     * @since  1.0.0
-     * @param  mixed $value
+     * @param mixed $value
      * @return mixed
-     *
-     * @access public
      */
     public function map( $value ) {
 

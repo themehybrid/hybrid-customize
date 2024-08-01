@@ -25,20 +25,13 @@ use WP_Customize_Manager;
 
 /**
  * Customize class.
- *
- * @since  1.0.0
- *
- * @access public
  */
 class Component implements Bootable {
 
     /**
      * Adds our customizer-related actions to the appropriate hooks.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access public
      */
     public function boot() {
 
@@ -49,11 +42,8 @@ class Component implements Bootable {
     /**
      * Registers our JS-based custom control types with WordPress.
      *
-     * @since  1.0.0
-     * @param  object $manager
+     * @param object $manager
      * @return void
-     *
-     * @access public
      */
     public function registerControls( WP_Customize_Manager $manager ) {
 
@@ -65,7 +55,7 @@ class Component implements Bootable {
             SelectMultiple::class,
         ];
 
-        array_map( static function( $control ) use ( $manager ) {
+        array_map( static function ( $control ) use ( $manager ) {
             $manager->register_control_type( $control );
         }, $controls );
     }

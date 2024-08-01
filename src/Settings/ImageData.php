@@ -23,21 +23,14 @@ use WP_Customize_Setting as Setting;
 
 /**
  * Saves image data in addition to the URL.
- *
- * @since  1.0.0
- *
- * @access public
  */
 class ImageData extends Setting {
 
     /**
      * Overwrites the `update()` method so we can save some extra data.
      *
-     * @since  1.0.0
-     * @param  string $value
+     * @param string $value
      * @return string
-     *
-     * @access public
      */
     protected function update( $value ) {
 

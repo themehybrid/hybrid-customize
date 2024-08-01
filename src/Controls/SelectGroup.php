@@ -17,30 +17,20 @@ namespace Hybrid\Customize\Controls;
 
 /**
  * Multiple select customize control class.
- *
- * @since  1.0.0
- *
- * @access public
  */
 class SelectGroup extends Control {
 
     /**
      * The type of customize control being rendered.
      *
-     * @since  1.0.0
-     * @var    string
-     *
-     * @access public
+     * @var string
      */
     public $type = 'hybrid-select-group';
 
     /**
      * Add custom parameters to pass to the JS via JSON.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access public
      */
     public function to_json() {
         parent::to_json();
@@ -66,12 +56,10 @@ class SelectGroup extends Control {
     /**
      * Underscore JS template to handle the control's output.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access protected
      */
-    protected function content_template() { ?>
+    protected function content_template() {
+        ?>
 
         <# if ( ! data.choices && ! data.group ) {
             return;

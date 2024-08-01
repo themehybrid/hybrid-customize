@@ -17,36 +17,26 @@ namespace Hybrid\Customize\Controls;
 
 /**
  * Radio image customize control.
- *
- * @since  1.0.0
- *
- * @access public
  */
 class RadioImage extends Control {
 
     /**
      * The type of customize control being rendered.
      *
-     * @since  1.0.0
-     * @var    string
-     *
-     * @access public
+     * @var string
      */
     public $type = 'hybrid-radio-image';
 
     /**
      * Add custom parameters to pass to the JS via JSON.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access public
      */
     public function to_json() {
         parent::to_json();
 
         // We need to make sure we have the correct image URL.
-        array_walk( $this->choices, static function( &$args, $key ) {
+        array_walk( $this->choices, static function ( &$args, $key ) {
 
             // Replaces `%s` or `%1$s` with the template directory
             // URI and `%2$s` with the stylesheet directory URI.
@@ -68,12 +58,10 @@ class RadioImage extends Control {
     /**
      * Underscore JS template to handle the control's output.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access protected
      */
-    protected function content_template() { ?>
+    protected function content_template() {
+        ?>
 
         <# if ( ! data.choices ) {
             return;
